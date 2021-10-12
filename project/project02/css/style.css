@@ -166,9 +166,10 @@
 .new_album_cate .menu03.on a {background-position: -78px -12px;}
 .new_album_cate li.on {pointer-events: none;}
 
-.new_album .list_wrap {position: absolute; top: 23px; left: -2px; width: 480px; height: 340px; overflow: hidden;}
-.sub_list {position: absolute; top: 0; left: 100%; width: 480px; margin: -2px 0 0 -3px;}
+.new_album .list_wrap {position: absolute; top: 23px; left: -2px; width: 480px; height: 340px; /* overflow: hidden; */}
+.sub_list {position: absolute; top: 0; left: 100%; width: 480px; margin: -2px 0 0 -3px; display: none;}
 .sub_list:first-child {left: 0;}
+.sub_list.on {display: block;}
 .sub_list li {height: 156px; margin: 3px 0 0 4px; position: relative; text-align: left;}
 .sub_list li .overlay {position: absolute; top: 0; left: 0; width: 156px; height: 156px; background: url(../images/frame_img.png) no-repeat -843px -843px; z-index: 2; display: none;}
 .sub_list li dl>dd:first-of-type {height: 130px;}
@@ -196,18 +197,6 @@
 .new_album_artist .popup button.close_btn {position: absolute; top: 12px; right: 12px; background: 0; cursor: pointer;}
 .new_album_artist .popup button.close_btn span {display: block; width: 11px; height: 11px; background: url(../images/sprite_btn.png) no-repeat -452px top;}
 .new_album_artist .popup span.bullet {display: block; width: 8px; height: 13px; position: absolute; top: 7px; left: -7px; background: url(../images/sprite_btn.png) no-repeat -472px top;}
-
-.balloon {position: absolute; z-index: 9999; display: none;}
-.balloon .popup {width: 168px; z-index: 9999; box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);}
-.balloon .popup .l_cntt {padding: 8px 28px 8px 8px; background: #fff; border: 1px solid #666;}
-.balloon .popup .l_cntt ul {padding-left: 6px; line-height: 16px; border: 0;}
-.balloon .popup .l_cntt ul li {margin-top: 6px; padding-left: 6px; background: url(../images/list_bullet.png) no-repeat left 6px; border: 0; width: auto; height: auto;}
-.balloon .popup .l_cntt ul li a {color: #1a1a1a;}
-.balloon .popup .l_cntt ul li a:hover {text-decoration: underline;}
-.balloon .popup button.close_btn {position: absolute; top: 12px; right: 12px; background: 0; cursor: pointer;}
-.balloon .popup button.close_btn span {display: block; width: 11px; height: 11px; background: url(../images/sprite_btn.png) no-repeat -452px top;}
-.balloon .popup span.bullet {display: block; width: 8px; height: 13px; position: absolute; top: 7px; left: -7px; background: url(../images/sprite_btn.png) no-repeat -472px top;}
-
 /* hover */
 .sub_list li .overlay .play_btn:hover {background-position: -1px -317px;}
 .sub_list li .overlay .album_tit:hover .tit_wrap span {text-decoration: underline;}

@@ -79,8 +79,7 @@ $(function(){
     });
 
     //최신앨범
-    var hover=$('.hover');
-    hover.hover(function(){
+    $('.hover').hover(function(){
         $(this).find('.overlay').fadeIn(200);
         $(this).find('+.singer').fadeOut(200);
     }, function(){
@@ -104,7 +103,8 @@ $(function(){
         $(this).find('.marquee').marquee('destroy');
     });
 
-    /* $('.new_album_artist button').click(function(){
+    $('.new_album_artist button').click(function(){
+        $(this).toggleClass('on');
         let state=$(this).find('+.popup').css('display');
         if(state==='none'){
             $(this).find('+.popup').fadeIn(500);
@@ -113,58 +113,31 @@ $(function(){
         }
         $('.close_btn').click(function(){
             $('.new_album_artist .popup').fadeOut(500);
-        });
-    }); */
-
-    var artistBtn=$('.new_album_artist button'),
-        balloon=$('<div class="balloon"></div>').appendTo('body');
-    artistBtn.each(function(){
-        var element=$(this),
-            popup=element.find('+.popup'), 
-            hoverPopup=popup.parents('.overlay'), 
-            closeBtn=popup.find('button.close_btn');
-        function updateBalloonPosition(x,y){
-            balloon.css({left:x+15, top:y-15});
-        };
-        element.click(function(e){
-            var balloonState=balloon.css('display');
-            if(balloonState==='none'){
-                popup.appendTo(balloon);
-                updateBalloonPosition(e.pageX,e.pageY);
-                balloon.fadeIn(500);
-                balloon.hover(function(){
-                    //hoverPopup.show();
-                }, function(){
-                    balloon.fadeOut(500,function(){
-                        popup.remove();
-                    });
-                });
-            } else{
-                balloon.fadeOut(500,function(){
-                    popup.remove();
-                });
-            }
-            closeBtn.click(function(){
-                balloon.fadeOut(500,function(){
-                    popup.remove();
-                });
-            });
+            $('.new_album_artist button').removeClass('on');
         });
     });
 
-    var subList=$('.sub_list'), leftBtn=$('.new_album .slider_btn a.prev'), rightBtn=$('.new_album .slider_btn a.next'), menuBtn=$('.new_album_cate li'), menuBtn01=$('.new_album_cate li.menu01'), menuBtn02=$('.new_album_cate li.menu02'), menuBtn03=$('.new_album_cate li.menu03'), pageNum=$('.new_album .page_num strong'), num=0;
+    var subList=$('.sub_list'), leftBtn=$('.new_album .slider_btn a.prev'), rightBtn=$('.new_album .slider_btn a.next'), menuBtn=$('.new_album_cate li'), menuBtn01=$('.new_album_cate li.menu01'), menuBtn02=$('.new_album_cate li.menu02'), menuBtn03=$('.new_album_cate li.menu03'), pageNum=$('.new_album .page_num strong'), newListWrap=$('.new_album .list_wrap'), num=0, check=false;
     function slide(tg,start,end){
-        tg.css('left',start).stop().animate({left:end},500);
+        newListWrap.css('overflow','hidden');
+        tg.css('left',start).stop().animate({left:end},500,function(){check=false;});
     }
     rightBtn.click(function(e){
         e.preventDefault();
-        var prev=subList.eq(num);
-        slide(prev,0,'-100%');
-        num++;
-        if(num==subList.size()){num=0;}
-        var next=subList.eq(num);
-        next.addClass('on');
-        slide(next,'100%',0);
+        if(check==false){
+            var prev=subList.eq(num);
+            slide(prev,0,'-100%');
+            num++;
+            if(num==subList.size()){num=0;}
+            var next=subList.eq(num);
+            next.addClass('on');
+            slide(next,'100%',0);
+            setTimeout(function(){
+                prev.removeClass('on');
+                newListWrap.css('overflow','visible');
+            },500);
+            check=true;
+        }
         pageNum.text(num+1);
         if(num>=1){
             leftBtn.removeClass('off');
@@ -185,13 +158,20 @@ $(function(){
     });
     leftBtn.click(function(e){
         e.preventDefault();
-        var prev=subList.eq(num);
-        slide(prev,0,'100%');
-        num--;
-        if(num==-subList.size()){num=0;}
-        var next=subList.eq(num);
-        next.addClass('on');
-        slide(next,'-100%',0);
+        if(check==false){
+            var prev=subList.eq(num);
+            slide(prev,0,'100%');
+            num--;
+            if(num==-subList.size()){num=0;}
+            var next=subList.eq(num);
+            next.addClass('on');
+            slide(next,'-100%',0);
+            setTimeout(function(){
+                prev.removeClass('on');
+                newListWrap.css('overflow','visible');
+            },500);
+            check=true;
+        }
         pageNum.text(num+1);
         if(num==0){
             $(this).removeClass('on');
@@ -220,6 +200,9 @@ $(function(){
         pageNum.text(num+1);
         leftBtn.addClass('off').removeClass('on');
         rightBtn.addClass('on').removeClass('off');
+        setTimeout(function(){
+            newListWrap.css('overflow','visible');
+        },500);
     });
     menuBtn02.click(function(e){
         e.preventDefault();
@@ -231,6 +214,9 @@ $(function(){
         pageNum.text(num+1);
         leftBtn.addClass('on').removeClass('off');
         rightBtn.addClass('on').removeClass('off');
+        setTimeout(function(){
+            newListWrap.css('overflow','visible');
+        },500);
     });
     menuBtn03.click(function(e){
         e.preventDefault();
@@ -242,10 +228,17 @@ $(function(){
         pageNum.text(num+1);
         leftBtn.addClass('on').removeClass('off');
         rightBtn.addClass('on').removeClass('off');
+        setTimeout(function(){
+            newListWrap.css('overflow','visible');
+        },500);
     });
     function slide1(i){
         if(num==i) return;
+        newListWrap.css('overflow','hidden');
         var currentEl=subList.eq(num);
+        setTimeout(function(){
+            currentEl.removeClass('on');
+        },500);
         var nextEl=subList.eq(i).addClass('on');
         currentEl.css('left','0').stop().animate({left:'-100%'},500);
         nextEl.css('left','100%').stop().animate({left:'0'},500);
@@ -253,7 +246,11 @@ $(function(){
     };
     function slide2(i){
         if(num==i) return;
+        newListWrap.css('overflow','hidden');
         var currentEl=subList.eq(num);
+        setTimeout(function(){
+            currentEl.removeClass('on');
+        },500);
         var nextEl=subList.eq(i).addClass('on');
         currentEl.css('left','0').stop().animate({left:'100%'},500);
         nextEl.css('left','-100%').stop().animate({left:'0'},500);

@@ -1,12 +1,23 @@
 $(function(){
     //fullpage
-    var wrap=$('#wrap');
+    var wrap=$('#wrap'),
+        header=$('#header');
     wrap.fullpage({
         scrollingSpeed: 800,
         autoScrolling: true,
         scrollBar: true,
 		scrollHorizontally: true,
         afterLoad: function(origin, destination, direction){
+            if(destination.index!=0){
+                header.addClass('fixed');
+                header.find('h1.logo .main_logo').hide();
+                header.find('h1.logo .fixed_logo').fadeIn(500);
+            }
+            else{
+                header.removeClass('fixed');
+                header.find('h1.logo .fixed_logo').hide();
+                header.find('h1.logo .main_logo').fadeIn(500);
+            }
             if(destination.index==1){
                 section2.find('.container_wrap>div').stop().animate({opacity:1},100);
             }

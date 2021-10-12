@@ -1,17 +1,25 @@
 /* 헤더 구조 */
-#header {width: 90%; padding: 0 5%; height: 80px; background: #fff; box-shadow: 0px 1px 10px #ccc; position: fixed; top: 0; left: 0; z-index: 9999;}
+#header {width: 90%; padding: 0 5%; height: 80px; background: #fff; box-shadow: 0px 1px 10px #ccc; position: fixed; top: 0; left: 0; z-index: 9999; transition: all .5s;}
 .header_wrap {max-width: 1400px; width: 100%; margin: 0 auto;}
 
 /* 로고 */
 h1.logo {float: left;}
 h1.logo a {display: inline-block;}
-h1.logo a img {margin-top: 8px;}
+h1.logo a .main_logo {margin-top: 8px;}
+h1.logo a .fixed_logo {display: none;}
 
 /* 메인메뉴 */
 nav.lnb {float: right;}
-.lnb ul li {display: inline-block; height: 80px;}
-.lnb ul li a {display: block; line-height: 80px; font-size: 18px; color: #666; font-weight: bold; font-family: 'Open Sans', sans-serif; padding-left: 5em;}
+.lnb ul li {display: inline-block; height: 80px; transition: all .5s;}
+.lnb ul li a {display: block; line-height: 80px; font-size: 18px; color: #666; font-weight: bold; font-family: 'Open Sans', sans-serif; padding-left: 5em; transition: all .5s;}
 .lnb ul li a:hover {color: #71bbf3;}
+
+/* 헤더 fixed */
+#header.fixed {height: 60px;}
+#header.fixed h1.logo a .main_logo {display: none;}
+#header.fixed h1.logo a .fixed_logo {margin-top: 5px;}
+#header.fixed .lnb ul li {height: 60px;}
+#header.fixed .lnb ul li a {line-height: 60px;}
 
 /* 컨텐츠 구조 */
 #contents {width: 90%; padding: 0 5%;}
