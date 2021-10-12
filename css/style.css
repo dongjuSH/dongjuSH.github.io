@@ -84,7 +84,10 @@ nav.lnb {float: right;}
 .skills .bar_chart li .percent {opacity: 0.7; position: absolute; bottom: 50px; font-size: 6rem; font-size: 4.5rem; width: 100%; line-height: 1em; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
 .skills .bar_chart li .percent span {font-size: 2.4rem; padding-left: 3px;}
 .skills .bar_chart li .skill {position: absolute; bottom: 20px; width: 100%; font-size: 1.6rem; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
-.skills .study {position: absolute; margin-top: 60px; left: 50%; transform: translateX(-50%);}
+.skills .git_hub {position: absolute; bottom: 250px; left: 50%; transform: translateX(-50%);}
+.skills .git_hub a {color: #666;}
+.skills .git_hub a:hover {color: #333; text-decoration: underline;}
+.skills .study {position: absolute; bottom: 190px;; left: 50%; transform: translateX(-50%);}
 .skills .study a {display: block; font-size: 32px; font-weight: bold; position: relative; padding-right: 35px;}
 .skills .study a::before {content: ''; width: 0; height: 10px; background: rgba(238, 155, 167, .5); position: absolute; bottom: 0; left: 0; border-radius: 10px; animation: underline 4s ease-in-out infinite alternate;}
 .skills .study a::after {content: ''; width: 20px; height: 20px; background: url(../images/skills_arrow.png) no-repeat; background-size: 20px 20px; position: absolute; top: 50%; right: 0; margin-top: -10px;}
