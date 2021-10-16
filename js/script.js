@@ -32,6 +32,10 @@ $(function(){
                 section4.find('.left_area').stop().animate({left:0},1000);
                 section4.find('.right_area').stop().animate({left:0},1000);
             }
+            if(destination.index==4){
+                section5.find('.left_area').stop().animate({left:0},1000);
+                section5.find('.right_area').stop().animate({left:0},1000);
+            }
         }
     });
 
@@ -41,10 +45,12 @@ $(function(){
         lnbPage2=$('nav.lnb ul li.page02'),
         lnbPage3=$('nav.lnb ul li.page03'),
         lnbPage4=$('nav.lnb ul li.page04'),
+        lnbPage5=$('nav.lnb ul li.page05'),
         section2=$('#section02'),
         section3=$('#section03'),
         section4=$('#section04'),
-        section5=$('#section05');
+        section5=$('#section05'),
+        section6=$('#section06');
     logo.click(function(e){
         e.preventDefault();
         $('html').stop().animate({scrollTop:0},500,'easeInOutQuad');
@@ -65,37 +71,14 @@ $(function(){
         e.preventDefault();
         $('html').stop().animate({scrollTop:section5.offset().top},500,'easeInOutQuad');
     });
-
-    //project
-    var pro_list=$('.project_list'),
-        pro_menu=pro_list.find('li'),
-        pro_slide=$('.project_slide .slide_wrap>div'),
-        current=pro_slide.index();
-    function movePrev(i){
-        if(current==i) return;
-        var currentEl=pro_slide.eq(current);
-        var nextEl=pro_slide.eq(i);
-        currentEl.css('left','0').stop().animate({left:'-100%'},500);
-        nextEl.css('left','100%').stop().animate({left:'0'},500);
-        current=i;
-    };
-    function moveNext(i){
-        if(current==i) return;
-        var currentEl=pro_slide.eq(current);
-        var nextEl=pro_slide.eq(i);
-        currentEl.css('left','0').stop().animate({left:'100%'},500);
-        nextEl.css('left','-100%').stop().animate({left:'0'},500);
-        current=i;
-    };
-    pro_menu.click(function(){
-        var target=$(this),
-            i=target.index();
-        target.addClass('on').siblings().removeClass('on');
-        if(current>i){moveNext(i)}
-        else(movePrev(i))
+    lnbPage5.click(function(e){
+        e.preventDefault();
+        $('html').stop().animate({scrollTop:section6.offset().top},500,'easeInOutQuad');
     });
 
-    var pro_img=pro_slide.find('.project_img img');
+    //project
+    var pro_slide=$('.project_slide .slide_wrap>div'),
+        pro_img=pro_slide.find('.project_img img');
     pro_img.hover(function(){
         var height=$(this).height()-310;
         $(this).stop().animate({top:-height},5000);
@@ -112,9 +95,9 @@ $(function(){
         pro_imgM.stop().animate({top:0},5000);
     });
     $('.pro01_pop').click(function(){
-        window.open('http://127.0.0.1:5500/project/project01/html/mobile','프로젝트1팝업','width=420, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://127.0.0.1:5500/project/project01/html/mobile','프로젝트1팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
     $('.pro02_pop').click(function(){
-        window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=420, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
 });

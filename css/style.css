@@ -24,8 +24,8 @@ nav.lnb {float: right;}
 /* 컨텐츠 구조 */
 #contents {width: 90%; padding: 0 5%;}
 .contents_wrap {max-width: 1400px; width: 100%; margin: 0 auto; overflow: hidden;}
-#section01, #section02, #section03, #section04, #section05 {width: 100%; height: 100vh; overflow: hidden;}
-#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
+#section01, #section02, #section03, #section04, #section05, #section06 {width: 100%; height: 100vh; overflow: hidden;}
+#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container, #section06 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
 
 /* 메인비주얼 */
 .main_visual {width: 100%; height: 100vh; position: relative;}
@@ -85,9 +85,9 @@ nav.lnb {float: right;}
 .skills .bar_chart li.brown {border-color: #dcb386; background-color: #dcba83; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #bc8e5b), color-stop(1, #dcba83)); opacity: 0;}
 .skills .bar_chart li.red {border-color: #e14949; background-color: #da6d6c; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca4544), color-stop(1, #da6d6c)); opacity: 0;}
 .skills .bar_chart li .label {color: #757575; margin: -0.6em 0 92px 0; font-size: 1.6rem; }
-.skills .bar_chart li .percent {opacity: 0.7; position: absolute; bottom: 50px; font-size: 6rem; font-size: 4.5rem; width: 100%; line-height: 1em; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
+.skills .bar_chart li .percent {opacity: 0.7; position: absolute; bottom: 60px; font-size: 6rem; font-size: 4.5rem; width: 100%; line-height: 1em; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
 .skills .bar_chart li .percent span {font-size: 2.4rem; padding-left: 3px;}
-.skills .bar_chart li .skill {position: absolute; bottom: 20px; width: 100%; font-size: 1.6rem; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
+.skills .bar_chart li .skill {position: absolute; bottom: 20px; width: 100%; font-size: 2rem;}
 .skills .study {position: absolute; bottom: 190px;; left: 50%; transform: translateX(-50%);}
 .skills .study a {display: block; font-size: 32px; font-weight: bold; position: relative; padding-right: 35px;}
 .skills .study a::before {content: ''; width: 0; height: 10px; background: rgba(238, 155, 167, .5); position: absolute; bottom: 0; left: 0; border-radius: 10px; animation: underline 4s ease-in-out infinite alternate;}
@@ -105,36 +105,39 @@ nav.lnb {float: right;}
 .project .project_list li {display: inline-block; font-size: 18px; font-weight: bold; width: 150px; height: 50px; line-height: 50px; border: 2px solid #71bbf3; border-radius: 10px; margin: 0 20px 0 0; cursor: pointer;}
 .project .project_list li.on {color: #fff; background: #71bbf3;}
 .project .project_list li:last-child {margin-right: 0;}
-.project .project_slide {width: 100%; height: 600px; padding-top: 60px;}
+.project .project_slide {width: 100%; height: 600px; padding-top: 120px;}
 .project .project_slide .slide_wrap {position: relative; width: 100%; height: 600px;}
-.project .project_slide .slide_wrap>div {position: absolute; top: 0; left: 100%; width: 100%; height: 600px; overflow: hidden;}
-.project .project_slide .slide_wrap>div.list01 {left: 0;}
+.project .project_slide .slide_wrap>div {position: absolute; top: 0; left: 100%; width: 100%; height: 600px;}
+.project .project_slide .slide_wrap>div.list {left: 0;}
 .project .project_slide .left_area {width: 50%; float: left; position: relative; left: -30%;}
 .project .project_slide .left_area .mockup {position: relative; display: block;}
 .project .project_slide .left_area .mockup .pc {margin-top: 40px;}
 .project .project_slide .left_area .mockup .mobile {position: absolute; bottom: 0; right: 28px; z-index: 9998; cursor: pointer;}
-.project .project_slide .left_area .click  {position: absolute; bottom: 20px; left: 20px; font-size: 18px; color: #000; font-weight: bold; z-index: 10; animation: opacity 2s ease-in-out infinite alternate;}
+.project .project_slide .left_area .sub_list {position: absolute; top: -10px; left: 0;}
+.project .project_slide .left_area .sub_list a {color: #666; background: url(../images/project_sub.png) no-repeat; display: inline-block; width: 82px; height: 70px; background-size: 82px; font-size: 16px; font-weight: bold; text-align: center; line-height: 65px; transition: all .5s;}
+.project .project_slide .left_area .sub_list a:hover {transform: rotate(-15deg);}
+.project .project_slide .left_area .click  {position: absolute; bottom: 40px; left: 20px; font-size: 24px; color: #000; font-weight: bold; z-index: 10;}
+.project .project_slide .left_area .click i {padding-right: 10px; animation: opacity 3s ease-in-out infinite alternate;}
 @keyframes opacity {
-    0% {opacity: .5;}
+    0% {opacity: 0;}
     100% {opacity: 1;}
 }
 .project .project_slide .left_area .project_img {display: block; position: absolute; top: 64px; left: 24px; width: 553px; height: 310px; overflow: hidden;}
-.project .project_slide .left_area .project_img img {width: 100%; position: absolute;}
+.project .project_slide .left_area .project_img img {width: 150%; position: absolute; left: 50%; transform: translateX(-50%);}
 .project .project_slide .left_area .project_img_mobile {display: block; position: absolute; bottom: 9px; right: 41px; width: 129px; height: 280px; overflow: hidden;}
 .project .project_slide .left_area .project_img_mobile img {width: 100%; position: absolute;}
-.project .project_slide .left_area .sub_list {position: absolute; bottom: 18px; left: 24px; background: url(../images/post-it.png) no-repeat;  background-size: 100px; width: 100px; height: 100px; padding: 10px; box-sizing: border-box;}
-.project .project_slide .left_area .sub_list.second {left: 134px;}
-.project .project_slide .left_area .sub_list.last {left: 244px;}
-.project .project_slide .left_area .sub_list a {display: block; text-align: center; font-family: 'Caveat', sans-serif; font-weight: bold; font-size: 18px; margin-bottom: 6px;}
-.project .project_slide .left_area .sub_list a:hover {text-decoration: underline;}
 .project .project_slide .right_area {width: 50%; float: right; position: relative; left: 30%;}
-.project .project_slide .right_area span.tit {display: block; margin-top: 40px; font-size: 28px; font-weight: bold;}
+.project .project_slide .right_area span.tit {display: block; font-size: 28px; font-weight: bold; margin-top: -35px;}
 .project .project_slide .right_area span.tit strong {font-size: 48px; color: #ccc;}
 .project .project_slide .right_area span.tit em {font-size: 18px; font-style: normal; font-weight: normal; padding-left: 10px;}
-.project .project_slide .right_area .txt_wrap {width: 100%; height: 400px; padding: 40px; box-sizing: border-box; background: rgba(0, 0, 0, .1); border-radius: 30px; margin-top: 10px;}
+.project .project_slide .right_area .txt_wrap {width: 100%; height: 400px; padding: 40px; box-sizing: border-box; background: #e9e9e9; border-radius: 30px; margin-top: 10px;}
 .project .project_slide .right_area .txt_wrap p {padding-bottom: 20px; line-height: 23px;}
 .project .project_slide .right_area .txt_wrap p.about {padding-bottom: 0;}
 .project .project_slide .right_area .txt_wrap .duration, .project .project_slide .right_area .txt_wrap .using {font-size: 18px; font-weight: bold;}
+.project .project_slide .right_area .cross_browsing {position: absolute; bottom: -34%; left: 50%; transform: translateX(-50%);}
+.project .project_slide .right_area .cross_browsing img {padding-right: 20px;}
+.project .project_slide .right_area .cross_browsing img.last {padding: 0;}
+.project .project_slide .right_area .cross_browsing span {display: block; margin-top: 20px; text-align: center; font-weight: bold; font-size: 24px; border-top: 4px solid #333;}
 
 /* 연락처 */
 .contact {width: 100%; height: 100vh; position: relative;}
