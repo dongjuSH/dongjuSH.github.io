@@ -1,0 +1,101 @@
+.gnb_area .gnb4>a {color: #3a82b6;}
+.gnb_area .gnb4>a::after {content: ''; position: absolute; left: 50%; margin-left: -4px; bottom: -5px; width: 8px; height: 8px; background: #3a82b6; border-radius: 50%; z-index: 3;}
+
+#middle {width: 100%; background: #f3f4f8;}
+
+#contbody {width: 1200px; margin: 0 auto; padding: 10px 0 30px;}
+
+#contleft {width: 240px;}
+#contleft h2 {font-size: 25px; color: #fff; text-align: center; padding: 100px 0 16px; background: url(../images/board/bg_h2.gif); position: relative;}
+#contleft h2::before {content: ''; background: url(../images/board/ico_h2.png) 0 -160px; width: 80px; height: 80px; position: absolute; top: 20px; left: 80px;}
+#contleft .lnbwrap ul {background: #fff;}
+#contleft .lnbwrap>ul>li>a {display: block; color: #555; padding: 0 20px; line-height: 42px; border: 1px solid #e4e4e4; border-top: none;}
+#contleft .lnbwrap ul li a:hover {text-decoration: underline;}
+#contleft .lnbwrap>ul>li a.click {background: #6a6e78; color: #fff; font-weight: bold; border: none; text-decoration: none;}
+#contleft .lnbwrap ul li a.blank::after {content: ''; background: url(../images/board/ico_blank.png) no-repeat center; padding-right: 20px;}
+#contleft .lnbwrap ul li ul {padding: 8px 10px 8px 14px; border: 1px solid #e4e4e4; border-top: none; display: none;}
+#contleft .lnbwrap>ul>li a.click +ul {display: block;}
+#contleft .lnbwrap ul li ul li {margin: 3px 0; line-height: 25px;}
+#contleft .lnbwrap ul li ul li a {color: #555;}
+#contleft .lnbwrap ul li ul li a.active {color: #3f5f9c; font-weight: bold; text-decoration: underline;}
+
+#contright {width: 880px; background: #fff; padding: 34px; border: 1px solid #e4e4e4;}
+#contright .navtitle {position: relative;}
+#contright .navtitle .nav>a {float: left; background: url(../images/board/ico_home.png) no-repeat center; width: 18px; height: 16px;}
+#contright .navtitle .nav>span {margin-left: 4px;}
+#contright .navtitle a {color: #555; text-indent: -9999px;}
+#contright .navtitle .snsFarm {position: absolute; top: 0; right: 0;}
+#contright .navtitle .snsFarm ul li {float: left;}
+#contright .navtitle .snsFarm ul li:nth-child(1) a {display: block; background: url(../images/board/ico_sp.png) 0 -30px; width: 41px; height: 40px; margin-left: 5px;}
+#contright .navtitle .snsFarm ul li:nth-child(2) a {display: block; background: url(../images/board/ico_sp.png) -50px -30px; width: 41px; height: 40px; margin-left: 5px;}
+#contright .navtitle h3 {font-size: 32px; color: #333; padding-top: 8px;}
+
+#contright .contents {padding: 25px 0 10px;}
+#contright .contents .noticeBox {background-color: #f3f4f8; border: 1px solid #e4e4e4; margin-bottom: 30px; padding: 15px 20px; line-height: 1.667;}
+#contright .contents .noticeBox ul li {background: url(../images/board/bul_dot.png) no-repeat 2px 9px; margin: 2px 0; padding-left: 15px;}
+#contright .contents .noticeBox ul li:nth-child(6) {background: none; padding-left: 0;}
+#contright .contents .noticeBox ul li a::after {content: ''; background: url(../images/board/ico_blank.png) no-repeat center; padding-right: 20px;}
+#contright .contents .noticeBox ul li .notice01 {color: #0459d7; font-weight: bold;}
+#contright .contents .noticeBox ul li .notice02 {font-weight: bold;}
+#contright .contents .noticeBox ul li .notice03 {color: #f40000; font-weight: bold; text-decoration: underline;}
+#contright .contents .noticeBox ul li .notice04 {color: #f40000; font-weight: bold;}
+#contright .contents .noticeBox ul li .grayBox {padding: 5px 10px; border: 1px solid #e4e4e4;}
+
+#contright .contents .boardWrap {display: inline-block; margin: 5px 0; border-top: 2px solid #666; border-bottom: 1px solid #ddd;}
+#contright .contents .boardWrap .boardList {display: inline-block; border-bottom: 1px solid #666;}
+#contright .contents .boardWrap .boardList div {float: left; text-align: center; font-weight: bold;}
+#contright .contents .boardWrap .boardList div span {display: block; padding: 10px 3px;}
+#contright .contents .boardWrap .boardList div:nth-child(1) {width: 60px;}
+#contright .contents .boardWrap .boardList div:nth-child(2) {width: 560px;}
+#contright .contents .boardWrap .boardList div:nth-child(3) {width: 90px;}
+#contright .contents .boardWrap .boardList div:nth-child(4) {width: 100px;}
+#contright .contents .boardWrap .boardList div:nth-child(5) {width: 70px;}
+
+#contright .contents .boardWrap .boardContents {display: inline-block; border-bottom: 1px solid #ddd;}
+#contright .contents .boardWrap .boardContents:last-child {border-bottom: none;}
+#contright .contents .boardWrap .boardContents div {float: left; text-align: center;}
+#contright .contents .boardWrap .boardContents div span {display: block; padding: 10px 3px;}
+#contright .contents .boardWrap .boardContents div label {display: block; padding: 10px 3px;}
+#contright .contents .boardWrap .boardContents div label {padding: 10px 3px;}
+#contright .contents .boardWrap .boardContents div:nth-child(2) {width: 60px;}
+#contright .contents .boardWrap .boardContents div:nth-child(3) {width: 560px; text-align: left;}
+#contright .contents .boardWrap .boardContents div:nth-child(4) {width: 90px;}
+#contright .contents .boardWrap .boardContents div:nth-child(5) {width: 100px;}
+#contright .contents .boardWrap .boardContents div:nth-child(6) {width: 70px;}
+#contright .contents .boardWrap .boardContents .ico_new {background-color: #ff5c03; font-size: 10px; color: #fff; border-radius: 25px; padding: 3px 0; margin: 10px auto; width: 30px;}
+
+.boardContents input {display: none;}
+.boardContents .content_wrap {width: 96%; text-align: left; padding: 0 2%; height: 0; overflow: hidden; transition: all .5s;}
+#contright .contents .boardWrap .boardContents .content_wrap .content {padding: 0; line-height: 0; overflow: hidden; border: none; text-align: justify;}
+.boardContents input:checked ~ .content_wrap {height: auto; padding: 2%;}
+#contright .contents .boardWrap .boardContents input:checked ~ .content_wrap>.content {height: auto; padding: 10px 20px; line-height: 24px; background: #f3f4f8; width: 720px; margin-left: 30px; border: 1px solid #e4e4e4;}
+.boardContents label {cursor: pointer;}
+.boardContents input:checked ~ .title label {cursor: default;}
+
+#contright .contents .pageWrap {position: relative; width: 100%; height: 30px; margin-top: 20px;}
+#contright .contents .page {padding: 2px 0; text-align: center; position: absolute; top: 0; left: 50%; margin-left: -197px;}
+#contright .contents .page div a {display: block; width: 27px; height: 27px; color: #555; line-height: 27px; border: 1px solid #ddd; margin: 0 2px;}
+#contright .contents .page div:nth-child(1) a {width: 28px; height: 28px; background: #3f5f9c; color: #fff; font-weight: bold; border: none; line-height: 28px;}
+.prev, .last {text-indent: -9999px;}
+.prev {background: url(../images/board/arr_sp02.png) no-repeat center;}
+.last {background: url(../images/board/arr_sp03.png) no-repeat center;}
+#contright .contents .pageWrap .page_btn a {display: block; background: #3f5f9c url(../images/board/ico_write.png) no-repeat center left 10px; color: #fff; position: absolute; right: 0; width: 28px; height: 20px; line-height: 20px; padding: 6px 15px 6px 30px;}
+
+#contright .contents .search_wrap {margin: 30px 0; background: #f6f8fb;}
+#contright .contents .search_wrap form {padding: 20px 0; text-align: center;}
+#contright .contents .search_wrap select {width: 100px; height: 32px; padding: 0 24px 0 4px; border: 1px solid #e1e1e1; color: #333; background: #fff url(../images/board/arr_select.png) no-repeat center right; appearance: none;}
+#contright .contents .search_wrap input {width: 358px; height: 30px; padding: 0 5px; border: 1px solid #e1e1e1; color: #333;}
+#contright .contents .search_wrap button {padding: 5px 10px 7px; background: #3f5f9c; color: #fff;}
+
+#contright .contents .satisfaction {margin-top: 60px; border: 1px solid #e4e4e4; position: relative;}
+#contright .contents .satisfaction .office {background-color: #f3f4f8; border-bottom: 1px solid #e4e4e4; padding: 8px 20px;}
+#contright .contents .satisfaction .satisPollCore {background: url(../images/board/img_satisfaction.gif) no-repeat 20px 20px; padding: 20px 20px 20px 120px;}
+#contright .contents .satisfaction .satisPollCore p {line-height: 24px;}
+#contright .contents .satisfaction .satisPollCore a {background: #7988d5; border-radius: 5px;}
+#contright .contents .satisfaction .satisPollCore a span {background: url(../images/board/ico_click.png) no-repeat center right; padding: 2px 15px 2px 2px; color: #fff;}
+#contright .contents .satisfaction .satisPollCore .radio {margin: 12px 0 7px;}
+#contright .contents .satisfaction .satisPollCore .radio label {margin-right: 30px;}
+#contright .contents .satisfaction .satisPollCore .satisComment {width: 738px;}
+#contright .contents .satisfaction .satisPollCore .satisComment input {width: 638px; height: 30px; border: 1px solid #e1e1e1; padding: 0 4px; line-height: 32px;}
+#contright .contents .satisfaction .satisPollCore .satisComment .comment {display: block; width: 80px; color: #fff; text-align: center; background: #3f5f9c; border-radius: 0; padding: 1px 2px; line-height: 30px;}
+#contright .contents .satisfaction .top {position: absolute; right: -84px; bottom: -45px; width: 40px; height: 20px; padding: 20px 4px 4px; background: #6a83b5 url(../images/board/ico_top.png) no-repeat center top 6px; color: #fff; text-align: center;}
