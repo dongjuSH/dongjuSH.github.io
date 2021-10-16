@@ -310,10 +310,8 @@ img {max-width: 100%; max-height: 100%;}
 .event_more {margin-top: 2px; font-size: 14px; color: #666;}
 
 .event_list_wrap {max-width: 570px; height: 221px; position: relative; overflow: hidden; margin: 10px auto 0;}
-.event_list {position: absolute; top: 0; left: 0;}
-.event_list.animate {transition: .5s;}
-.event_box {width: 189px; margin-right: 10px; border: 1px solid #e8e8e8; box-sizing: border-box;}
-.event_box:last-child {margin-right: 0;}
+.event_list {position: absolute; top: 0; left: 0; width: 1000px;}
+.event_box {width: 172.5px; margin-right: 10px; border: 1px solid #e8e8e8; box-sizing: border-box;}
 .event_box_line {width: 100%; height: 100%; position: relative;}
 .event_box_line .top {width: 0; height: 2px; background: #395ea2; position: absolute; top: 0; left: 0; transition: all .5s;}
 .event_box_line .right {width: 2px; height: 0; background: #395ea2; position: absolute; top: 0; right: 0; transition: all .5s;}
@@ -367,14 +365,12 @@ img {max-width: 100%; max-height: 100%;}
 .sns_ico li a {display: block; width: 30px; height: 30px;}
 .sns_ico_img {width: 34px; height: 34px; margin-left: 5px;}
 .snsbn_box {width: 100%; height: 154px; overflow: hidden; position: relative;}
-.snsbn_box .sns_list {position: absolute; top: 0; left: 0;}
-.snsbn_box .sns_list.animate {transition: .5s;}
-.snsbn_box .sns_list li {width: 189px; margin-right: 10px; position: relative; display: block; box-sizing: border-box; text-align: center;}
-.snsbn_box li:last-child {margin-right: 0;}
+.snsbn_box .sns_list {position: absolute; top: 0; left: 0; width: 4000px;}
+.snsbn_box .sns_list li {width: 172.5px; margin-right: 10px; box-sizing: border-box; text-align: center;}
 .snsbn_box li a {display: block; position: relative; box-sizing: border-box;}
 .sns_img {position: relative; display: block; padding-top: 57%; box-sizing: border-box; width: 100%;}
 .sns_img .sns_ico {display: block; position: absolute; top: auto; bottom: -12px; left: 0; width: 30px; height: 30px; background-repeat: no-repeat; background-size: 100%; z-index: 2;}
-.sns_img .sns_ico.visiosn {background-image: url(../images/sns_ico01.png);}
+.sns_img .sns_ico.vision {background-image: url(../images/sns_ico01.png);}
 .sns_img .sns_ico.facebook {background-image: url(../images/sns_ico02.png);}
 .sns_img .sns_ico.youtube {background-image: url(../images/sns_ico03.png);}
 .sns_img .sns_ico.insta {background-image: url(../images/sns_ico04.png);}

@@ -51,7 +51,6 @@ $(function () {
     });
 
     /* 인기검색어 */
-    // 코드 수정 필요!
     var slide_wrap1 = $('.keyword_area'),
         list1 = slide_wrap1.find('.keyword_list .keyword_wrap .list_wrap .list'),
         list_wrap1 = slide_wrap1.find('.keyword_wrap .list_wrap'),
@@ -363,174 +362,62 @@ $(function () {
     });
 
     /* 행사/강좌/공모 */
-    var slideShow = $('.event_list'),
-        slides = slideShow.find('li.event_box'),
-        slideBtn = $('.event_slide_btn .slide_item'),
-        currentIdx = 0,
-        slideCount = slides.length,
-        slideWidth = 189,
-        slideMargin = 10;
-    makeClone();
-    function makeClone() {
-        for (var i = 0; i < slideCount; i++) {
-            var cloneSlide = slides.eq(i).clone();
-            cloneSlide.addClass('clone');
-            slideShow.append(cloneSlide);
-        }
-        for (var i = slideCount - 1; i >= 0; i--) {
-            var cloneSlide = slides.eq(i).clone();
-            cloneSlide.addClass('clone');
-            slideShow.prepend(cloneSlide);
-        }
-        updateWidth();
-        setInitialPos();
-        setTimeout(function () {
-            slideShow.addClass('animate');
-        }, 100);
-    };
-    function updateWidth() {
-        var currentSlides = slideShow.find('li.event_box');
-        var newSlideCount = currentSlides.length;
-        var newWidth = (slideWidth + slideMargin) * newSlideCount - slideMargin + 'px';
-        slideShow.width(newWidth);
-    };
-    function setInitialPos() {
-        var initailTranslateValue = -(slideWidth + slideMargin) * slideCount;
-        slideShow.css('transform', 'translateX(' + initailTranslateValue + 'px');
-    };
-    function moveSlide(num) {
-        var left = -num * (slideWidth + slideMargin) + 'px';
-        slideShow.css('left', left);
-        currentIdx = num;
-        if (currentIdx == slideCount || currentIdx == -slideCount) {
-            currentIdx = 0;
-            slideBtn.eq(currentIdx).find('a').addClass('active');
-            setTimeout(function () {
-                slideShow.removeClass('animate');
-                slideShow.css('left', 0);
-            }, 500);
-            setTimeout(function () {
-                slideShow.addClass('animate');
-            }, 550);
-        }
-    };
-    var showTimer = undefined;
-    function autoSlide() {
-        if (showTimer == undefined) {
-            showTimer = setInterval(function () {
-                moveSlide(currentIdx + 1);
-                slideBtn.find('a').removeClass('active');
-                slideBtn.eq(currentIdx).find('a').addClass('active');
-            }, 5000);
-        }
-    };
-    autoSlide();
-    function stopSlide() {
-        clearInterval(showTimer);
-        showTimer = undefined;
-    };
-    slideShow.on({
-        mouseover: function mouseover() {
-            stopSlide();
-        },
-        mouseout: function mouseout() {
-            autoSlide();
-        }
+    var slideShow=$('.event_list'),
+        slides=slideShow.find('li'),
+        slideWidth=slides.width(),
+        slideBtn=$('.event_slide_btn .slide_item'),
+        btnIdx=1,
+        autoSlide;
+    slide();
+    function slide(){
+        autoSlide=setInterval(function(){            
+            slideShow.animate({left:-slideWidth},500,function(){
+                $(this).children('li:first').insertAfter($(this).children('li:last'));
+                $(this).css({left:0});
+                btnIdx++;
+                if(btnIdx==slides.length){btnIdx=0;}
+            });
+            slideBtn.find('a').removeClass('active');
+            slideBtn.eq(btnIdx).find('a').addClass('active');
+        },5000)
+    }
+    slideShow.hover(function(){
+        clearInterval(autoSlide);
+    },function(){
+        slide();
     });
 
     /* 성남소식 */
-    var slideShow2 = $('.sns_list'),
-        slides2 = slideShow2.find('li'),
-        currentIdx2 = 0,
-        slideCount2 = slides2.length,
-        slideWidth2 = 189,
-        slideMargin2 = 10,
-        prevBtn2 = $('.sns_slider_btn .slider_prev'),
-        nextBtn2 = $('.sns_slider_btn .slider_next'),
-        stopBtn2 = $('.sns_slider_btn .slider_stop'),
-        playBtn2 = $('.sns_slider_btn .slider_play');
-    makeClone2();
-    function makeClone2() {
-        for (var i = 0; i < slideCount2; i++) {
-            var cloneSlide = slides2.eq(i).clone();
-            cloneSlide.addClass('clone');
-            slideShow2.append(cloneSlide);
-        }
-        for (var i = slideCount2 - 1; i >= 0; i--) {
-            var cloneSlide = slides2.eq(i).clone();
-            cloneSlide.addClass('clone');
-            slideShow2.prepend(cloneSlide);
-        }
-        updateWidth2();
-        setInitialPos2();
-        setTimeout(function () {
-            slideShow2.addClass('animate');
-        }, 100);
-    };
-    function updateWidth2() {
-        var currentSlides = slideShow2.find('li');
-        var newSlideCount = currentSlides.length;
-        var newWidth = (slideWidth2 + slideMargin2) * newSlideCount - slideMargin2 + 'px';
-        slideShow2.width(newWidth);
-    };
-    function setInitialPos2() {
-        var initailTranslateValue = -(slideWidth2 + slideMargin2) * slideCount2;
-        slideShow2.css('transform', 'translateX(' + initailTranslateValue + 'px');
-    };
-    nextBtn2.click(function (e) {
-        e.preventDefault();
-        moveSlide2(currentIdx2 + 1);
+    var sns_slide=$('.sns_list').bxSlider({
+        minSlides: 2,
+        maxSlides: 2,
+        slideWidth: 280,
+        slideMargin: 10,
+        moveSlides: 1,
+        auto: true,
+        pause: 5000,
+        speed: 500,
+        adaptiveHeight: true,
+        controls: false,
+        pager: false
     });
-    prevBtn2.click(function (e) {
+    $('.sns_slider_btn li a').click(function(e){
         e.preventDefault();
-        moveSlide2(currentIdx2 - 1);
-    });
-    stopBtn2.click(function (e) {
-        e.preventDefault();
-        stopSlide2();
-        $(this).hide();
-        playBtn2.show();
-    });
-    playBtn2.click(function (e) {
-        e.preventDefault();
-        autoSlide2();
-        $(this).hide();
-        stopBtn2.show();
-    });
-    function moveSlide2(num) {
-        var left = -num * (slideWidth2 + slideMargin2) + 'px';
-        slideShow2.css('left', left);
-        currentIdx2 = num;
-        if (currentIdx2 == slideCount2 || currentIdx2 == -slideCount2) {
-            setTimeout(function () {
-                slideShow2.removeClass('animate');
-                slideShow2.css('left', 0);
-                currentIdx2 = 0;
-            }, 500);
-            setTimeout(function () {
-                slideShow2.addClass('animate');
-            }, 550);
+        if($(this).hasClass('slider_prev')){
+            sns_slide.goToPrevSlide();
         }
-    };
-    var showTimer2 = undefined;
-    function autoSlide2() {
-        if (showTimer2 == undefined) {
-            showTimer2 = setInterval(function () {
-                moveSlide2(currentIdx2 + 1);
-            }, 5000);
+        if($(this).hasClass('slider_next')){
+            sns_slide.goToNextSlide();
         }
-    };
-    autoSlide2();
-    function stopSlide2() {
-        clearInterval(showTimer2);
-        showTimer2 = undefined;
-    };
-    slideShow2.on({
-        mouseover: function mouseover() {
-            stopSlide2();
-        },
-        mouseout: function mouseout() {
-            autoSlide2();
+        if($(this).hasClass('slider_stop')){
+            sns_slide.stopAuto();
+            $('.sns_slider_btn li a.slider_stop').hide();
+            $('.sns_slider_btn li a.slider_play').show();
+        }
+        else{
+            sns_slide.startAuto();
+            $('.sns_slider_btn li a.slider_play').hide();
+            $('.sns_slider_btn li a.slider_stop').show();
         }
     });
 

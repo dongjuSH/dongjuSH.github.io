@@ -112,9 +112,9 @@ $(function(){
         pro_imgM.stop().animate({top:0},5000);
     });
     $('.pro01_pop').click(function(){
-        window.open('http://ehdwn661.dothome.co.kr/project/project01/html/mobile','프로젝트1팝업','width=414, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://127.0.0.1:5500/project/project01/html/mobile','프로젝트1팝업','width=420, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
     $('.pro02_pop').click(function(){
-        window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=414, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=420, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
 });

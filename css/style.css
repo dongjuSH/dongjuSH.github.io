@@ -29,35 +29,39 @@ nav.lnb {float: right;}
 
 /* 메인비주얼 */
 .main_visual {width: 100%; height: 100vh; position: relative;}
-.main_visual .left_area {float: left;}
+.main_visual .left_area {float: left; width: 30%;}
 .main_visual .main_visual_slogan {padding-top: 216px; font-family: 'BMHANNAAir', sans-serif;}
 .main_visual .main_visual_slogan .slogan_sub_txt {font-size: 42px; color: #ee9ba7;}
 .main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 58px; color: #71bbf3; padding-top: 28px;}
 .main_visual .main_visual_slogan .slogan_txt strong {font-size: 86px; font-family: 'BMHANNAPro', sans-serif;}
-.main_visual .download_btn {padding-top: 65px; width: 100%;}
-.main_visual .download_btn a {display: block; width: 280px; height: 52px; border: 2px solid #333; border-radius: 10px; box-sizing: border-box; font-size: 24px; font-weight: bold; text-align: center; line-height: 48px; margin-left: 50%; transform: translateX(-50%);}
-.main_visual .download_btn a span {position: relative;}
-.main_visual .download_btn a span::before {content: ''; width: 0; height: 2px; background: #333; position: absolute; bottom: 0; left: 0; animation: underline 3s ease-in-out infinite alternate;}
+.main_visual .download_btn {margin-top: 70px; width: 45%; float: left;}
+.main_visual .git_hub {margin-top: 70px; width: 45%; float: right;}
+.main_visual .download_btn a, .main_visual .git_hub a {display: block; border: 2px solid #333; box-sizing: border-box; font-size: 24px; font-weight: bold; text-align: center; line-height: 45px;}
+.main_visual .download_btn a span, .main_visual .git_hub a span {position: relative;}
+.main_visual .download_btn a span::before, .main_visual .git_hub a span::before {content: ''; width: 0; height: 2px; background: #333; position: absolute; bottom: 0; left: 0; animation: underline 5s ease-in-out infinite alternate;}
 @keyframes underline {
     0% {width: 0%;}
     100% {width: 100%;}
 }
-.main_visual .right_area {float: right; position: relative;}
-.main_visual .right_area img {margin-top: 84px;}
+.main_visual .right_area {float: right; position: relative; width: 70%;}
+.main_visual .right_area img {margin-top: 84px; width: 100%;}
 
 /* 소개 */
 .about_me {width: 100%; height: 100vh; position: relative;}
 .about_me h2 {padding-top: 28px; font-size: 52px; position: relative;}
 .about_me h2::after {content: ' +';}
 .about_me .container_wrap {display: flex; justify-content: space-evenly; margin-top: 47px;}
-.about_me .container_wrap div {width: 25%; border: 2px solid #ccc; border-radius: 10px; padding: 20px 15px 70px; box-sizing: border-box; transition: all .5s; opacity: 0;}
+.about_me .container_wrap div {width: 25%; border: 2px solid #eee; border-radius: 10px; padding: 20px 15px 70px; box-sizing: border-box; transition: all .5s; opacity: 0; box-shadow: 1px 15px 13px #e5e5e5; position: relative;}
 .about_me .container_wrap div:hover {box-shadow: 8px 8px 15px #ccc; transform: translateY(-20px);}
-.about_me .container_wrap ul li.tit {position: relative; font-size: 20px; font-weight: bold; padding: 25px 0 0 25px; margin-bottom: 10px; font-family: 'Open Sans', sans-serif;}
-.about_me .container_wrap ul li.tit::before {content: ''; display: block; width: 20px; height: 20px; background: #ee9ba7; border-radius: 50%; opacity: .7; position: absolute; top: -8px; left: -3px;}
-.about_me .container_wrap ul li.tit::after {content: ''; display: block; width: 20px; height: 20px; background: #ee9ba7; border-radius: 50%; opacity: .7; position: absolute; top: -8px; right: 0;}
-.about_me .container_wrap ul li.hashtag {padding: 2px 0 2px 25px;}
+.about_me .container_wrap div ul {position: relative;}
+.about_me .container_wrap div ul::before {content: ''; display: block; width: 20px; height: 20px; background: #ee9ba7; border-radius: 50%; opacity: .7; position: absolute; top: -8px; left: -3px;}
+.about_me .container_wrap div ul::after {content: ''; display: block; width: 20px; height: 20px; background: #ee9ba7; border-radius: 50%; opacity: .7; position: absolute; top: -8px; right: 0;}
+.about_me .container_wrap ul li.tit {font-size: 20px; font-weight: bold; padding: 25px 0 0 25px; margin-bottom: 10px; font-family: 'Open Sans', sans-serif;}
+.about_me .container_wrap ul li.tit span {position: relative;}
+.about_me .container_wrap ul li.tit span::after {content: ''; display: block; width: 100%; height: 10px; background: rgba(238, 155, 167, .3); border-radius: 10px; position: absolute; bottom: 0; left: 0;}
+.about_me .container_wrap ul li.hashtag {padding: 2px 0 2px 25px; color: #666;}
 .about_me .container_wrap ul li.hashtag.first {padding-top: 30px;}
-.about_me .container_wrap ul li {padding: 10px 0 10px 25px;}
+.about_me .container_wrap ul li {padding: 10px 25px;}
 .about_me .btn_more {border: 2px solid rgba(114, 187, 243, .5); border-radius: 50%; padding: 10px; float: left; position: absolute; margin-top: 40px; left: 50%; transform: translateX(-50%);}
 .about_me .btn_more a {display: block; width: 93px; height: 93px; line-height: 93px; border-radius: 50%; color: #fff; text-align: center; font-size: 20px; background: rgba(114, 187, 243, .9); font-family: 'Open Sans', sans-serif; font-weight: bold; letter-spacing: 1px;}
 .about_me .btn_more:hover a {animation: shadow 1.5s infinite;}
@@ -84,9 +88,6 @@ nav.lnb {float: right;}
 .skills .bar_chart li .percent {opacity: 0.7; position: absolute; bottom: 50px; font-size: 6rem; font-size: 4.5rem; width: 100%; line-height: 1em; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
 .skills .bar_chart li .percent span {font-size: 2.4rem; padding-left: 3px;}
 .skills .bar_chart li .skill {position: absolute; bottom: 20px; width: 100%; font-size: 1.6rem; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
-.skills .git_hub {position: absolute; bottom: 250px; left: 50%; transform: translateX(-50%);}
-.skills .git_hub a {color: #666;}
-.skills .git_hub a:hover {color: #333; text-decoration: underline;}
 .skills .study {position: absolute; bottom: 190px;; left: 50%; transform: translateX(-50%);}
 .skills .study a {display: block; font-size: 32px; font-weight: bold; position: relative; padding-right: 35px;}
 .skills .study a::before {content: ''; width: 0; height: 10px; background: rgba(238, 155, 167, .5); position: absolute; bottom: 0; left: 0; border-radius: 10px; animation: underline 4s ease-in-out infinite alternate;}
@@ -119,7 +120,7 @@ nav.lnb {float: right;}
 }
 .project .project_slide .left_area .project_img {display: block; position: absolute; top: 64px; left: 24px; width: 553px; height: 310px; overflow: hidden;}
 .project .project_slide .left_area .project_img img {width: 100%; position: absolute;}
-.project .project_slide .left_area .project_img_mobile {display: block; position: absolute; bottom: 8px; right: 42px; width: 128px; height: 280px; overflow: hidden;}
+.project .project_slide .left_area .project_img_mobile {display: block; position: absolute; bottom: 9px; right: 41px; width: 129px; height: 280px; overflow: hidden;}
 .project .project_slide .left_area .project_img_mobile img {width: 100%; position: absolute;}
 .project .project_slide .left_area .sub_list {position: absolute; bottom: 18px; left: 24px; background: url(../images/post-it.png) no-repeat;  background-size: 100px; width: 100px; height: 100px; padding: 10px; box-sizing: border-box;}
 .project .project_slide .left_area .sub_list.second {left: 134px;}
