@@ -24,8 +24,8 @@ nav.lnb {float: right;}
 /* 컨텐츠 구조 */
 #contents {width: 90%; padding: 0 5%;}
 .contents_wrap {max-width: 1400px; width: 100%; margin: 0 auto; overflow: hidden;}
-#section01, #section02, #section03, #section04, #section05, #section06 {width: 100%; height: 100vh; overflow: hidden;}
-#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container, #section06 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
+#section01, #section02, #section03, #section04, #section05, #section06, #section07 {width: 100%; height: 100vh; overflow: hidden;}
+#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container, #section06 .container, #section07 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
 
 /* 메인비주얼 */
 .main_visual {width: 100%; height: 100vh; position: relative;}
@@ -88,13 +88,32 @@ nav.lnb {float: right;}
 .skills .bar_chart li .percent {opacity: 0.7; position: absolute; bottom: 60px; font-size: 6rem; font-size: 4.5rem; width: 100%; line-height: 1em; text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);}
 .skills .bar_chart li .percent span {font-size: 2.4rem; padding-left: 3px;}
 .skills .bar_chart li .skill {position: absolute; bottom: 20px; width: 100%; font-size: 2rem;}
-.skills .study {position: absolute; bottom: 190px;; left: 50%; transform: translateX(-50%);}
-.skills .study a {display: block; font-size: 32px; font-weight: bold; position: relative; padding-right: 35px;}
-.skills .study a::before {content: ''; width: 0; height: 10px; background: rgba(238, 155, 167, .5); position: absolute; bottom: 0; left: 0; border-radius: 10px; animation: underline 4s ease-in-out infinite alternate;}
-.skills .study a::after {content: ''; width: 20px; height: 20px; background: url(../images/skills_arrow.png) no-repeat; background-size: 20px 20px; position: absolute; top: 50%; right: 0; margin-top: -10px;}
-.skills .study a:hover::after {animation: bounceX .5s ease-in-out 2 alternate;}
+.skills .study_link {position: absolute; bottom: 220px;; left: 50%; transform: translateX(-50%);}
+.skills .study_link a {display: block; font-size: 32px; font-weight: bold; position: relative;}
+.skills .study_link a::before {content: ''; width: 0; height: 10px; background: rgba(238, 155, 167, .5); position: absolute; bottom: 0; left: 0; border-radius: 10px; transition: all 1s;}
+.skills .study_link a:hover::before {width: 100%;}
+.skills .study_link a::after {content: ''; width: 30px; height: 30px; background: url(../images/skills_arrow.png) no-repeat; background-size: 30px 30px; position: absolute; bottom: -40px; left: 50%; margin-left: -15px; animation: bounceY 2.5s alternate infinite;}
+@keyframes bounceY {
+    0% {transform: translateY(-5px);}
+    100% {transform: translateY(15px);}
+}
+
+/* 공부 */
+.study {width: 100%; height: 100vh; position: relative;}
+.study h2 {padding-top: 28px; font-size: 52px; position: relative;}
+.study h2::after {content: ' +';}
+.study .container_wrap {width: 100%; margin-top: 30px;}
+.study .container_wrap>div {width: 100%; opacity: 0;}
+.study .container_wrap>div>a {float: left; display: block; width: 40%; height: 230px; margin-bottom: 20px; border: 5px solid rgba(113, 187, 243, .8); border-radius: 10px; box-sizing: border-box; overflow: hidden;}
+.study .container_wrap img {width: 150%; transform: translate(-138px,-60px);}
+.study .container_wrap .introduce {float: right; background: #e9e9e9; border-radius: 10px; width: 58.5%; height: 230px; box-sizing: border-box; padding: 30px;}
+.study .container_wrap .introduce span {display: block;}
+.study .container_wrap .introduce span.tit {font-size: 24px; font-weight: bold; margin-bottom: 20px;}
+.study .container_wrap .introduce a.link {display: inline-block; margin-top: 30px; font-size: 18px; font-weight: bold; position: relative; padding-right: 30px;}
+.study .container_wrap .introduce a.link::after {content: ''; width: 18px; height: 18px; background: url(../images/study_arrow.png) no-repeat; background-size: 18px 18px; position: absolute; top: 3px; right: 0;}
+.study .container_wrap .introduce a.link:hover::after {animation: bounceX .5s alternate 2;}
 @keyframes bounceX {
-    100% {transform: translateX(-10px);}
+    100% {transform: translateX(10px);}
 }
 
 /* 프로젝트 */
