@@ -29,7 +29,9 @@ $(function(){
                 section3.find('li.pr').stop().delay(1200).animate({height:'60%', opacity:1},300);
             }
             if(destination.index==3){
-                section4.find('.study .container_wrap>div').stop().animate({opacity:1},100);
+                section4.find('.study .container_wrap .coding').stop().animate({opacity:1},200);
+                section4.find('.study .container_wrap .graphic').stop().delay(300).animate({opacity:1},200);
+                section4.find('.study .container_wrap .video').stop().delay(600).animate({opacity:1},200);
             }
             if(destination.index==4){
                 section5.find('.left_area').stop().animate({left:0},1000);
