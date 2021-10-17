@@ -29,12 +29,15 @@ $(function(){
                 section3.find('li.pr').stop().delay(1200).animate({height:'60%', opacity:1},300);
             }
             if(destination.index==3){
-                section4.find('.left_area').stop().animate({left:0},1000);
-                section4.find('.right_area').stop().animate({left:0},1000);
+                section4.find('.study .container_wrap>div').stop().animate({opacity:1},100);
             }
             if(destination.index==4){
                 section5.find('.left_area').stop().animate({left:0},1000);
                 section5.find('.right_area').stop().animate({left:0},1000);
+            }
+            if(destination.index==5){
+                section6.find('.left_area').stop().animate({left:0},1000);
+                section6.find('.right_area').stop().animate({left:0},1000);
             }
         }
     });
@@ -46,11 +49,13 @@ $(function(){
         lnbPage3=$('nav.lnb ul li.page03'),
         lnbPage4=$('nav.lnb ul li.page04'),
         lnbPage5=$('nav.lnb ul li.page05'),
+        lnbPage6=$('nav.lnb ul li.page06'),
         section2=$('#section02'),
         section3=$('#section03'),
         section4=$('#section04'),
         section5=$('#section05'),
-        section6=$('#section06');
+        section6=$('#section06'),
+        section7=$('#section07');
     logo.click(function(e){
         e.preventDefault();
         $('html').stop().animate({scrollTop:0},500,'easeInOutQuad');
@@ -75,6 +80,17 @@ $(function(){
         e.preventDefault();
         $('html').stop().animate({scrollTop:section6.offset().top},500,'easeInOutQuad');
     });
+    lnbPage6.click(function(e){
+        e.preventDefault();
+        $('html').stop().animate({scrollTop:section7.offset().top},500,'easeInOutQuad');
+    });
+
+    /* skills */
+    var studyLink=$('.skills .study_link');
+    studyLink.click(function(e){
+        e.preventDefault();
+        $('html').stop().animate({scrollTop:section4.offset().top},500,'easeInOutQuad');
+    })
 
     //project
     var pro_slide=$('.project_slide .slide_wrap>div'),
@@ -95,7 +111,7 @@ $(function(){
         pro_imgM.stop().animate({top:0},5000);
     });
     $('.pro01_pop').click(function(){
-        window.open('http://127.0.0.1:5500/project/project01/html/mobile','프로젝트1팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://ehdwn661.dothome.co.kr/project/project01/html/mobile','프로젝트1팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
     $('.pro02_pop').click(function(){
         window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
