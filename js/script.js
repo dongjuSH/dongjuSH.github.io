@@ -22,11 +22,31 @@ $(function(){
                 section2.find('.container_wrap>div').stop().animate({opacity:1},100);
             }
             if(destination.index==2){
-                section3.find('li.html').stop().animate({height:'90%', opacity:1},300);
-                section3.find('li.js').stop().delay(300).animate({height:'75%', opacity:1},300);
-                section3.find('li.jq').stop().delay(600).animate({height:'80%', opacity:1},300);
-                section3.find('li.ps').stop().delay(900).animate({height:'65%', opacity:1},300);
-                section3.find('li.pr').stop().delay(1200).animate({height:'60%', opacity:1},300);
+                var percentWrap=section3.find('li.per');
+                if(!percentWrap.hasClass('active')){
+                    percentAni();
+                    percentWrap.addClass('active');
+                }
+                function percentAni(){
+                    percentWrap.each(function(){
+                        var percentText=$(this).find('.percent'),
+                            percentRate=percentText.attr('data-rate');
+                        $(this).animate({height:percentRate+"%",opacity:1},1200);
+                        $({rate:0}).animate({rate:percentRate},{
+                            duration: 1200,
+                            progress: function(){
+                                var now=this.rate;
+                                percentText.text(Math.floor(now)+'%');
+                            }
+                        });
+                    });
+                };
+
+                /* section3.find('li.aqua').stop().animate({height:'90%', opacity:1},300);
+                section3.find('li.pink').stop().delay(300).animate({height:'75%', opacity:1},300);
+                section3.find('li.yellow').stop().delay(600).animate({height:'80%', opacity:1},300);
+                section3.find('li.brown').stop().delay(900).animate({height:'65%', opacity:1},300);
+                section3.find('li.red').stop().delay(1200).animate({height:'60%', opacity:1},300); */
             }
             if(destination.index==3){
                 section4.find('.study .container_wrap .coding').stop().animate({opacity:1},200);

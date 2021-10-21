@@ -1,0 +1,58 @@
+* {margin: 0; padding: 0;}
+
+.animation {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+.progress-bar {
+    margin: 0 20px;
+    position: relative;
+}
+.progress-bar h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+}
+.progress-bar .rate {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    color: green;
+    line-height: 30px;
+}
+.progress-bar svg {
+    width: 220px;
+    height: 220px;
+}
+circle {
+    fill: #ebebeb;
+    stroke-width: 20;
+    stroke: #ffc114;
+    stroke-dasharray: 628; /* 선길이 */
+    stroke-dashoffset: 0; /* 선간격 */
+    animation: line 2s forwards;
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    stroke-linecap: round;
+}
+/* @keyframes line {
+    from {stroke-dashoffset: 628;}
+    to {stroke-dashoffset: 0;}
+} */
+.circle2 circle{
+    stroke: #ff5248;
+}
+.circle3 circle{
+    stroke: #19caca;
+}
+
+/* 추가 */
+.content {
+    height: 800px;
+    font-size: 3em;
+}
