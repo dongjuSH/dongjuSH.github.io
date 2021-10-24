@@ -12,6 +12,7 @@ h1.logo a .fixed_logo {display: none;}
 nav.lnb {float: right;}
 .lnb ul li {display: inline-block; height: 80px; transition: all .5s;}
 .lnb ul li a {display: block; line-height: 80px; font-size: 18px; color: #666; font-weight: bold; font-family: 'Open Sans', sans-serif; padding-left: 5em; transition: all .5s;}
+.lnb ul li:first-child a {padding-left: 0;}
 .lnb ul li a:hover {color: #71bbf3;}
 
 /* 헤더 fixed */
@@ -31,9 +32,9 @@ nav.lnb {float: right;}
 .main_visual {width: 100%; height: 100vh; position: relative;}
 .main_visual .left_area {float: left; width: 30%;}
 .main_visual .main_visual_slogan {padding-top: 216px; font-family: 'BMHANNAAir', sans-serif;}
-.main_visual .main_visual_slogan .slogan_sub_txt {font-size: 42px; color: #ee9ba7;}
-.main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 58px; color: #71bbf3; padding-top: 28px;}
-.main_visual .main_visual_slogan .slogan_txt strong {font-size: 86px; font-family: 'BMHANNAPro', sans-serif;}
+.main_visual .main_visual_slogan .slogan_sub_txt {font-size: 40px; color: #ee9ba7;}
+.main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 56px; color: #71bbf3; padding-top: 28px;}
+.main_visual .main_visual_slogan .slogan_txt strong {font-size: 80px; font-family: 'BMHANNAPro', sans-serif;}
 .main_visual .download_btn {margin-top: 70px; width: 45%; float: left;}
 .main_visual .git_hub {margin-top: 70px; width: 45%; float: right;}
 .main_visual .download_btn a, .main_visual .git_hub a {display: block; border: 2px solid #333; box-sizing: border-box; font-size: 24px; font-weight: bold; text-align: center; line-height: 45px;}
@@ -188,3 +189,21 @@ nav.lnb {float: right;}
 .footer_area {width: 100%; margin: 0 auto; height: 100px; text-align: center; float: left; padding-top: 80px;}
 .footer_area span {display: block;}
 .footer_area cite {font-style: normal;}
+
+
+/* 반응형 */
+@media screen and (max-width:1250px) {
+    .lnb ul li a {padding-left: 3em;}
+    .main_visual .main_visual_slogan .slogan_sub_txt {font-size: 28px;}
+    .main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 44px;}
+    .main_visual .main_visual_slogan .slogan_txt strong {font-size: 68px;}
+}
+
+@media all and (min-width:769px) and (max-width:1024px) {
+    h1.logo a .main_logo {width: 80%; margin-top: 12px;}
+    .lnb ul li a {padding-left: 2em; font-size: 16px;}
+    .main_visual .main_visual_slogan .slogan_sub_txt {font-size: 20px;}
+    .main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 36px;}
+    .main_visual .main_visual_slogan .slogan_txt strong {font-size: 60px;}
+    .main_visual .download_btn a, .main_visual .git_hub a {font-size: 16px; line-height: 35px;}
+}
