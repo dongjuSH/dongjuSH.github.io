@@ -102,7 +102,7 @@ nav.lnb {float: right;}
 .study {width: 100%; height: 100vh; position: relative;}
 .study h2 {padding-top: 28px; font-size: 52px; position: relative;}
 .study h2::after {content: ' +';}
-.study .container_wrap {width: 100%; margin-top: 30px;}
+.study .container_wrap {width: 100%; margin-top: 20px;}
 .study .container_wrap>div {width: 100%; opacity: 0; transition: all .5s;}
 .study .container_wrap>div>a {float: left; display: block; width: 40%; height: 230px; margin-bottom: 20px; border: 5px solid rgba(113, 187, 243, .8); border-radius: 10px; box-sizing: border-box; overflow: hidden;}
 .study .container_wrap img {width: 150%; transform: translate(-138px,-60px);}
@@ -110,7 +110,7 @@ nav.lnb {float: right;}
 .study .container_wrap .introduce span {display: block;}
 .study .container_wrap .introduce span.tit {font-size: 24px; font-weight: bold; margin-bottom: 20px;}
 .study .container_wrap .introduce a.link {display: inline-block; margin-top: 30px; font-size: 18px; font-weight: bold; position: relative; padding-right: 30px;}
-.study .container_wrap .introduce a.link::after {content: ''; width: 18px; height: 18px; background: url(../images/study_arrow.png) no-repeat; background-size: 18px 18px; position: absolute; top: 3px; right: 0;}
+.study .container_wrap .introduce a.link::after {content: ''; width: 18px; height: 18px; background: url(../images/study_arrow.png) no-repeat; background-size: 18px 18px; position: absolute; top: 5px; right: 0;}
 .study .container_wrap .introduce a.link:hover::after {animation: bounceX .5s alternate 2;}
 @keyframes bounceX {
     100% {transform: translateX(10px);}
