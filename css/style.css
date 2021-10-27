@@ -158,7 +158,8 @@ nav.lnb {float: right;}
 .project .project_slide .right_area .cross_browsing img {padding-right: 20px;}
 .project .project_slide .right_area .cross_browsing img.last {padding: 0;}
 .project .project_slide .right_area .cross_browsing span {display: block; margin-top: 20px; text-align: center; font-weight: bold; font-size: 24px; border-top: 4px solid #333;}
-.right_area a.pro {position: absolute; bottom: -30px; right: 20px; font-size: 24px; font-weight: bold; color: #71bbf3; text-decoration: underline;}
+.right_area a.pro {position: absolute; bottom: -30px; left: 20px; font-size: 24px; font-weight: bold;}
+.right_area a.pro::after {content: ''; width: 0; height: 4px; background: #71bbf3; position: absolute; bottom: -5px; left: 0; animation: underline 3s ease-in-out infinite alternate;}
 
 /* 연락처 */
 .contact {width: 100%; height: 100vh; position: relative;}
