@@ -1,27 +1,33 @@
 $(function(){
     //fullpage
     var wrap=$('#wrap'),
-        header=$('#header');
+        header=$('#header'),
+        lnbList=$('.lnb ul li');
     wrap.fullpage({
         scrollingSpeed: 800,
         autoScrolling: true,
         scrollBar: true,
 		scrollHorizontally: true,
         afterLoad: function(origin, destination, direction){
-            if(destination.index!=0){
+            if(destination.index==0){
+                header.removeClass('fixed');
+                header.find('h1.logo .fixed_logo').hide();
+                header.find('h1.logo .main_logo').fadeIn(500);
+                lnbList.find('a').removeClass('on');
+            }
+            else{
                 header.addClass('fixed');
                 header.find('h1.logo .main_logo').hide();
                 header.find('h1.logo .fixed_logo').fadeIn(500);
             }
-            else{
-                header.removeClass('fixed');
-                header.find('h1.logo .fixed_logo').hide();
-                header.find('h1.logo .main_logo').fadeIn(500);
-            }
             if(destination.index==1){
+                lnbPage1.find('a').addClass('on');
+                lnbPage1.siblings('li').find('a').removeClass('on');
                 section2.find('.container_wrap>div').stop().animate({opacity:1},100);
             }
             if(destination.index==2){
+                lnbPage2.find('a').addClass('on');
+                lnbPage2.siblings('li').find('a').removeClass('on');
                 var percentWrap=section3.find('li.per');
                 if(!percentWrap.hasClass('active')){
                     percentAni();
@@ -49,17 +55,27 @@ $(function(){
                 section3.find('li.red').stop().delay(1200).animate({height:'60%', opacity:1},300); */
             }
             if(destination.index==3){
-                section4.find('.study .container_wrap .coding').stop().animate({opacity:1},200);
-                section4.find('.study .container_wrap .graphic').stop().delay(300).animate({opacity:1},200);
-                section4.find('.study .container_wrap .video').stop().delay(600).animate({opacity:1},200);
+                lnbPage3.find('a').addClass('on');
+                lnbPage3.siblings('li').find('a').removeClass('on');
+                section4.find('.left_area').stop().animate({left:0},1000);
+                section4.find('.right_area').stop().animate({left:0},1000);
             }
             if(destination.index==4){
+                lnbPage4.find('a').addClass('on');
+                lnbPage4.siblings('li').find('a').removeClass('on');
                 section5.find('.left_area').stop().animate({left:0},1000);
                 section5.find('.right_area').stop().animate({left:0},1000);
             }
             if(destination.index==5){
-                section6.find('.left_area').stop().animate({left:0},1000);
-                section6.find('.right_area').stop().animate({left:0},1000);
+                lnbPage5.find('a').addClass('on');
+                lnbPage5.siblings('li').find('a').removeClass('on');
+                section6.find('.study .container_wrap .coding').stop().animate({opacity:1},200);
+                section6.find('.study .container_wrap .graphic').stop().delay(300).animate({opacity:1},200);
+                section6.find('.study .container_wrap .video').stop().delay(600).animate({opacity:1},200);
+            }
+            if(destination.index==6){
+                lnbPage6.find('a').addClass('on');
+                lnbPage6.siblings('li').find('a').removeClass('on');
             }
         }
     });
@@ -84,26 +100,32 @@ $(function(){
     });
     lnbPage1.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section2.offset().top},500,'easeInOutQuad');
     });
     lnbPage2.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section3.offset().top},500,'easeInOutQuad');
     });
     lnbPage3.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section4.offset().top},500,'easeInOutQuad');
     });
     lnbPage4.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section5.offset().top},500,'easeInOutQuad');
     });
     lnbPage5.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section6.offset().top},500,'easeInOutQuad');
     });
     lnbPage6.click(function(e){
         e.preventDefault();
+        $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section7.offset().top},500,'easeInOutQuad');
     });
 
@@ -111,7 +133,7 @@ $(function(){
     var studyLink=$('.skills .study_link');
     studyLink.click(function(e){
         e.preventDefault();
-        $('html').stop().animate({scrollTop:section4.offset().top},500,'easeInOutQuad');
+        $('html').stop().animate({scrollTop:section6.offset().top},500,'easeInOutQuad');
     })
 
     //project

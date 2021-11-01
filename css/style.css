@@ -14,6 +14,7 @@ nav.lnb {float: right;}
 .lnb ul li a {display: block; line-height: 80px; font-size: 18px; color: #666; font-weight: bold; font-family: 'Open Sans', sans-serif; padding-left: 5em; transition: all .5s;}
 .lnb ul li:first-child a {padding-left: 0;}
 .lnb ul li a:hover {color: #71bbf3;}
+.lnb ul li a.on {color: #71bbf3;}
 
 /* 헤더 fixed */
 #header.fixed {height: 60px;}
@@ -35,11 +36,17 @@ nav.lnb {float: right;}
 .main_visual .main_visual_slogan .slogan_sub_txt {font-size: 40px; color: #ee9ba7;}
 .main_visual .main_visual_slogan .slogan_txt, .main_visual .main_visual_slogan .slogan_name {font-size: 56px; color: #71bbf3; padding-top: 28px;}
 .main_visual .main_visual_slogan .slogan_txt strong {font-size: 80px; font-family: 'BMHANNAPro', sans-serif;}
-.main_visual .download_btn {margin-top: 70px; width: 45%; float: left;}
-.main_visual .git_hub {margin-top: 70px; width: 45%; float: right;}
-.main_visual .download_btn a, .main_visual .git_hub a {display: block; border: 2px solid #333; box-sizing: border-box; font-size: 24px; font-weight: bold; text-align: center; line-height: 45px;}
+.main_visual .download_btn {margin-top: 70px; width: 35%; float: left; margin-right: 50px;}
+.main_visual .git_hub {margin-top: 70px; width: 35%; float: left;}
+.main_visual .download_btn a, .main_visual .git_hub a {display: block; box-sizing: border-box; font-size: 24px; font-weight: bold; text-align: center; line-height: 45px;}
+.main_visual .download_btn a {border: 2px solid #ee9ba7;}
+.main_visual .git_hub a {border: 2px solid #71bbf3;}
 .main_visual .download_btn a span, .main_visual .git_hub a span {position: relative;}
-.main_visual .download_btn a span::before, .main_visual .git_hub a span::before {content: ''; width: 0; height: 2px; background: #333; position: absolute; bottom: 0; left: 0; animation: underline 5s ease-in-out infinite alternate;}
+.main_visual .download_btn a span {color: #ee9ba7;}
+.main_visual .git_hub a span {color: #71bbf3;}
+.main_visual .download_btn a span::before, .main_visual .git_hub a span::before {content: ''; width: 0; height: 2px; position: absolute; bottom: 0; left: 0; animation: underline 5s ease-in-out infinite alternate;}
+.main_visual .download_btn a span::before {background: #ee9ba7;}
+.main_visual .git_hub a span::before {background: #71bbf3;}
 @keyframes underline {
     0% {width: 0%;}
     100% {width: 100%;}
@@ -99,24 +106,6 @@ nav.lnb {float: right;}
     100% {transform: translateY(15px);}
 }
 
-/* 공부 */
-.study {width: 100%; height: 100vh; position: relative;}
-.study h2 {padding-top: 28px; font-size: 52px; position: relative;}
-.study h2::after {content: ' +';}
-.study .container_wrap {width: 100%; margin-top: 20px;}
-.study .container_wrap>div {width: 100%; opacity: 0; transition: all .5s;}
-.study .container_wrap>div>a {float: left; display: block; width: 40%; height: 230px; margin-bottom: 20px; border: 5px solid rgba(113, 187, 243, .8); border-radius: 10px; box-sizing: border-box; overflow: hidden;}
-.study .container_wrap img {width: 150%; transform: translate(-138px,-60px);}
-.study .container_wrap .introduce {float: right; background: #e9e9e9; border-radius: 10px; width: 58.5%; height: 230px; box-sizing: border-box; padding: 30px;}
-.study .container_wrap .introduce span {display: block;}
-.study .container_wrap .introduce span.tit {font-size: 24px; font-weight: bold; margin-bottom: 20px;}
-.study .container_wrap .introduce a.link {display: inline-block; margin-top: 30px; font-size: 18px; font-weight: bold; position: relative; padding-right: 30px;}
-.study .container_wrap .introduce a.link::after {content: ''; width: 18px; height: 18px; background: url(../images/study_arrow.png) no-repeat; background-size: 18px 18px; position: absolute; top: 5px; right: 0;}
-.study .container_wrap .introduce a.link:hover::after {animation: bounceX .5s alternate 2;}
-@keyframes bounceX {
-    100% {transform: translateX(10px);}
-}
-
 /* 프로젝트 */
 .project {width: 100%; height: 100vh; position: relative;}
 .project h2 {padding-top: 28px; font-size: 52px; position: relative;}
@@ -160,6 +149,24 @@ nav.lnb {float: right;}
 .project .project_slide .right_area .cross_browsing span {display: block; margin-top: 20px; text-align: center; font-weight: bold; font-size: 24px; border-top: 4px solid #333;}
 .right_area a.pro {position: absolute; bottom: -30px; left: 20px; font-size: 24px; font-weight: bold;}
 .right_area a.pro::after {content: ''; width: 0; height: 4px; background: #71bbf3; position: absolute; bottom: -5px; left: 0; animation: underline 3s ease-in-out infinite alternate;}
+
+/* 공부 */
+.study {width: 100%; height: 100vh; position: relative;}
+.study h2 {padding-top: 28px; font-size: 52px; position: relative;}
+.study h2::after {content: ' +';}
+.study .container_wrap {width: 100%; margin-top: 20px;}
+.study .container_wrap>div {width: 100%; opacity: 0; transition: all .5s;}
+.study .container_wrap>div>a {float: left; display: block; width: 40%; height: 230px; margin-bottom: 20px; border: 5px solid rgba(113, 187, 243, .8); border-radius: 10px; box-sizing: border-box; overflow: hidden;}
+.study .container_wrap img {width: 150%; transform: translate(-138px,-60px);}
+.study .container_wrap .introduce {float: right; background: #e9e9e9; border-radius: 10px; width: 58.5%; height: 230px; box-sizing: border-box; padding: 30px; position: relative;}
+.study .container_wrap .introduce span {display: block;}
+.study .container_wrap .introduce span.tit {font-size: 24px; font-weight: bold; margin-bottom: 20px;}
+.study .container_wrap .introduce a.link {display: inline-block; margin-top: 30px; font-size: 18px; font-weight: bold; position: absolute; bottom: 30px; padding-right: 30px;}
+.study .container_wrap .introduce a.link::after {content: ''; width: 18px; height: 18px; background: url(../images/study_arrow.png) no-repeat; background-size: 18px 18px; position: absolute; top: 5px; right: 0;}
+.study .container_wrap .introduce a.link:hover::after {animation: bounceX .5s alternate 2;}
+@keyframes bounceX {
+    100% {transform: translateX(10px);}
+}
 
 /* 연락처 */
 .contact {width: 100%; height: 100vh; position: relative;}
