@@ -1,3 +1,23 @@
+body {font-family: "Noto Sans KR", sans-serif;}
+.btn {background: none;}
+
 nav.navbar {height: 100px;}
 .logo img {width: 87px; height: 35px;}
 ul.navbar-nav li a {font-size: 18px; font-weight: bold;}
+.right_area>div {position: relative; padding: 0 10px;}
+.right_area>div::after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: inline-block; width: 1px; height: 16px; background: #fff;}
+.right_area>div:last-child::after {content: none;}
+.lang_eng a {display: block; color: #fff; font-weight: bold; width: 58px; text-align: center;}
+
+.main {margin-top: -48px;}
+.carousel-control-prev-icon {background: url(../images/main_prevbtn.png);}
+.carousel-control-next-icon {background: url(../images/main_nextbtn.png);}
+.carousel-control-next-icon, .carousel-control-prev-icon {width: 40px; height: 76px;}
+.carousel-indicators {bottom: 60px;}
+.carousel-indicators .active {background: #d92628;}
+.carousel-indicators li {width: 11px; height: 11px; background: #ccc; transform: skew(-25deg); margin: 0 4px;}
+.carousel-indicators li.stop_btn {background: url(../images/stop_btn.png) no-repeat; width: 9px; height: 11px; transform: none; margin: 0 8px;}
+.carousel-indicators li.play_btn {background: url(../images/play_btn.png) no-repeat; width: 9px; height: 11px; transform: none; margin: 0 8px;}
+.scroll_down {position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%);}
+
+.contents h2 {font-size: 34px; color: #898989; font-weight: bold; background: url(../images/title_bg.png) no-repeat center;}
