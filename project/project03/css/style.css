@@ -7,9 +7,11 @@ ul, ol {list-style: none;}
     margin-right: 1rem !important;
 }
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1440px;
-    }
+    .container {max-width: 1440px;}
+}
+@media (max-width: 700px) {
+    .carousel-item img.pc {display: none;}
+    header.navbar {background-color: rgba(220, 56, 72, .8) !important;}
 }
 form.col-lg-auto {padding-right: 0;}
 
@@ -27,6 +29,8 @@ header {min-height: 100px;}
 .contents img {width: 100%;}
 .contents h2 {font-size: 34px; color: #898989; font-weight: bold; background: url(../images/title_bg.png) no-repeat center;}
 .container {position: relative;}
+.container>img {cursor: pointer;}
+.container>img:hover +.category .tit {text-decoration: underline;}
 .category {width: calc(100% - 30px); height: 55px; position: absolute; left: 15px; bottom: 0; background: rgba(0,0,0,.5);}
 .contents .tit {position: absolute; top: 50%; transform: translateY(-50%); left: 25px; color: #fff; font-size: 24px;}
 
