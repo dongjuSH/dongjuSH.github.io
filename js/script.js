@@ -47,12 +47,6 @@ $(function(){
                         });
                     });
                 };
-
-                /* section3.find('li.aqua').stop().animate({height:'90%', opacity:1},300);
-                section3.find('li.pink').stop().delay(300).animate({height:'75%', opacity:1},300);
-                section3.find('li.yellow').stop().delay(600).animate({height:'80%', opacity:1},300);
-                section3.find('li.brown').stop().delay(900).animate({height:'65%', opacity:1},300);
-                section3.find('li.red').stop().delay(1200).animate({height:'60%', opacity:1},300); */
             }
             if(destination.index==3){
                 lnbPage3.find('a').addClass('on');
@@ -69,13 +63,19 @@ $(function(){
             if(destination.index==5){
                 lnbPage5.find('a').addClass('on');
                 lnbPage5.siblings('li').find('a').removeClass('on');
-                section6.find('.study .container_wrap .coding').stop().animate({opacity:1},200);
-                section6.find('.study .container_wrap .graphic').stop().delay(300).animate({opacity:1},200);
-                section6.find('.study .container_wrap .video').stop().delay(600).animate({opacity:1},200);
+                section6.find('.left_area').stop().animate({left:0},1000);
+                section6.find('.right_area').stop().animate({left:0},1000);
             }
             if(destination.index==6){
                 lnbPage6.find('a').addClass('on');
                 lnbPage6.siblings('li').find('a').removeClass('on');
+                section7.find('.study .container_wrap .coding').stop().animate({opacity:1},200);
+                section7.find('.study .container_wrap .graphic').stop().delay(300).animate({opacity:1},200);
+                section7.find('.study .container_wrap .video').stop().delay(600).animate({opacity:1},200);
+            }
+            if(destination.index==7){
+                lnbPage7.find('a').addClass('on');
+                lnbPage7.siblings('li').find('a').removeClass('on');
             }
         }
     });
@@ -88,12 +88,14 @@ $(function(){
         lnbPage4=$('nav.lnb ul li.page04'),
         lnbPage5=$('nav.lnb ul li.page05'),
         lnbPage6=$('nav.lnb ul li.page06'),
+        lnbPage7=$('nav.lnb ul li.page07'),
         section2=$('#section02'),
         section3=$('#section03'),
         section4=$('#section04'),
         section5=$('#section05'),
         section6=$('#section06'),
-        section7=$('#section07');
+        section7=$('#section07'),
+        section8=$('#section08');
     logo.click(function(e){
         e.preventDefault();
         $('html').stop().animate({scrollTop:0},500,'easeInOutQuad');
@@ -128,13 +130,18 @@ $(function(){
         $(this).find('a').addClass('on');
         $('html').stop().animate({scrollTop:section7.offset().top},500,'easeInOutQuad');
     });
+    lnbPage7.click(function(e){
+        e.preventDefault();
+        $(this).find('a').addClass('on');
+        $('html').stop().animate({scrollTop:section8.offset().top},500,'easeInOutQuad');
+    });
 
     /* skills */
     var studyLink=$('.skills .study_link');
     studyLink.click(function(e){
         e.preventDefault();
         $('html').stop().animate({scrollTop:section6.offset().top},500,'easeInOutQuad');
-    })
+    });
 
     //project
     var pro_slide=$('.project_slide .slide_wrap>div'),
@@ -159,5 +166,8 @@ $(function(){
     });
     $('.pro02_pop').click(function(){
         window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+    });
+    $('.pro03_pop').click(function(){
+        window.open('http://ehdwn661.dothome.co.kr/project/project03','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
 });

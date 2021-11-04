@@ -26,8 +26,8 @@ nav.lnb {float: right;}
 /* 컨텐츠 구조 */
 #contents {width: 90%; padding: 0 5%;}
 .contents_wrap {max-width: 1400px; width: 100%; margin: 0 auto; overflow: hidden;}
-#section01, #section02, #section03, #section04, #section05, #section06, #section07 {width: 100%; height: 100vh; overflow: hidden;}
-#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container, #section06 .container, #section07 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
+#section01, #section02, #section03, #section04, #section05, #section06, #section07, #section08 {width: 100%; height: 100vh; overflow: hidden;}
+#section01 .container, #section02 .container, #section03 .container, #section04 .container, #section05 .container, #section06 .container, #section07 .container, #section08 .container {padding-top: 80px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
 
 /* 메인비주얼 */
 .main_visual {width: 100%; height: 100vh; position: relative;}
@@ -149,6 +149,7 @@ nav.lnb {float: right;}
 .project .project_slide .right_area .cross_browsing span {display: block; margin-top: 20px; text-align: center; font-weight: bold; font-size: 24px; border-top: 4px solid #333;}
 .right_area a.pro {position: absolute; bottom: -30px; left: 20px; font-size: 24px; font-weight: bold;}
 .right_area a.pro::after {content: ''; width: 0; height: 4px; background: #71bbf3; position: absolute; bottom: -5px; left: 0; animation: underline 3s ease-in-out infinite alternate;}
+#section06 .project .project_slide .left_area .project_img img {width: 100%}
 
 /* 공부 */
 .study {width: 100%; height: 100vh; position: relative;}
@@ -198,7 +199,6 @@ nav.lnb {float: right;}
 .footer_area {width: 100%; margin: 0 auto; height: 100px; text-align: center; float: left; padding-top: 80px;}
 .footer_area span {display: block;}
 .footer_area cite {font-style: normal;}
-
 
 /* 반응형 */
 @media screen and (max-width:1250px) {
