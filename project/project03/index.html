@@ -1,202 +1,246 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="title icon" type="image/png" href="images/title-img.png"/>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="title icon" type="image/png" href="images/title-img.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <title>삼천리자전거</title>
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-danger pl-5 pr-5">
-      <a class="navbar-brand" href="#">
-        <h1 class="logo">
-          <img src="images/main_logo.png" alt="메인 로고">
-        </h1>
-      </a>
-      <div class="collapse navbar-collapse justify-content-between" id="navbar">
-        <ul class="navbar-nav">
-          <li class="nav-item pl-5">
-            <a class="nav-link text-light text-uppercase font-weight-bold" href="#">자전거<span class="sr-only">자전거</span></a>
-          </li>
-          <li class="nav-item pl-5">
-            <a class="nav-link text-light text-uppercase font-weight-bold" href="#">용품<span class="sr-only">용품</span></a>
-          </li>
-          <li class="nav-item pl-5">
-            <a class="nav-link text-light text-uppercase font-weight-bold" href="#">대리점<span class="sr-only">대리점</span></a>
-          </li>
-          <li class="nav-item pl-5">
-            <a class="nav-link text-light text-uppercase font-weight-bold" href="#">고객지원<span class="sr-only">고객지원</span></a>
-          </li>
-          <li class="nav-item pl-5">
-            <a class="nav-link text-light text-uppercase font-weight-bold" href="#">뉴스<span class="sr-only">뉴스</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="right_area navbar-collapse justify-content-end">
-        <div class="py-2 sns_ico">
-          <a href="#"><i class="fas fa-blog fa-2x text-light mx-2"></i></a>
-          <a href="#"><i class="fab fa-instagram-square fa-2x text-light mx-2"></i></a>
-          <a href="#"><i class="fab fa-facebook-square fa-2x text-light mx-2"></i></a>
-          <a href="#"><i class="fab fa-youtube fa-2x text-light mx-2"></i></a>
+<body>
+    <header class="navbar navbar-expand-md fixed-top bg-danger">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start wd-100">
+                <a href="index.html"
+                    class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none me-lg-3">
+                    <img src="images/main_logo.png" alt="삼천리 자전거 로고">
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-white">자전거</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">용품</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">대리점</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">고객지원</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">뉴스</a></li>
+                </ul>
+                <div class="sns_area text-end me-lg-3 mb-2 mb-lg-0 justify-content-end">
+                    <a href="#"><i class="fas fa-blog fa-2x text-light mx-2"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square fa-2x text-light mx-2"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square fa-2x text-light mx-2"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-2x text-light mx-2"></i></a>
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 justify-content-end">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-white" placeholder="Search..."
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn" type="button"><i class="fas fa-search text-muted"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="lang_eng">
-          <a href="#"><span>ENG</span></a>
-        </div>
-        <div class="search_btn">
-          <button class="btn" type="button"><i class="fas fa-search fa-2x text-light"></i></button>
-        </div>
-        <div class="menu_btn">
-          <button class="btn" type="button"><i class="fas fa-bars fa-2x text-light"></i></button>
-        </div>
-      </div>
-    </nav>
-    <!-- //navbar -->
+    </header>
+    <!-- //header -->
 
     <section class="main">
-      <div class="container-fluid">
-        <div id="myCarousel" class="row carousel slide" data-ride="carousel" style="height:100vh">
-          <div class="carousel-inner">
-            <ul class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-              <li class="stop_btn"><img src="images/stop_btn.png" alt="멈추기"></li>
-              <li class="play_btn"><img src="imgaes/play_btn" alt="재생"></li>
-            </ul>
-            <div class="carousel-item active">
-              <img src="images/main_banner01.png" alt="우리아이 든든한 두발 삼천리 어린이 자전거">
+        <div class="container-fluid">
+            <div id="myCarousel" class="row carousel slide" data-ride="carousel" style="height:100vh">
+                <div class="carousel-inner">
+                    <ul class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li class="stop_btn"><span class="sr-only">멈추기</span></li>
+                        <li class="play_btn"><span class="sr-only">재생</span></li>
+                    </ul>
+                    <div class="carousel-item active">
+                        <img src="images/main_banner01.png" alt="우리아이 든든한 두발 삼천리 어린이 자전거">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/main_banner02.png" alt="도심속 여유를 느끼다 시티형 전기자전거 팬텀 시티">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/main_banner03.png" alt="전기자전거의 핵심은 자전거 삼천리 전기자전거 브랜드 팬텀">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <img src="images/scroll_down.png" alt="스크롤 다운 이미지" class="scroll_down">
             </div>
-            <div class="carousel-item">
-              <img src="images/main_banner02.png" alt="도심속 여유를 느끼다 시티형 전기자전거 팬텀 시티">
-            </div>
-            <div class="carousel-item">
-              <img src="images/main_banner03.png" alt="전기자전거의 핵심은 자전거 삼천리 전기자전거 브랜드 팬텀">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <img src="images/scroll_down.png" alt="스크롤 다운 이미지" class="scroll_down">
         </div>
-      </div>
     </section>
     <!-- //main -->
 
     <section class="contents bg-light p-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col text-center">
-            <h2 class="mb-5">FIND YOUR STYLE</h2>
-          </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="mb-5">FIND YOUR STYLE</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img01.png" alt="전기자전거">
+                    <div class="category">
+                        <span class="tit">전기자전거</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img02.png" alt="산악">
+                    <div class="category">
+                        <span class="tit">산악</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img03.png" alt="컴포트 산악형">
+                    <div class="category">
+                        <span class="tit">컴포트 산악형</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img04.png" alt="로드">
+                    <div class="category">
+                        <span class="tit">로드</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img05.png" alt="하이브리드">
+                    <div class="category">
+                        <span class="tit">하이브리드</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img06.png" alt="시티">
+                    <div class="category">
+                        <span class="tit">시티</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img07.png" alt="미니벨로">
+                    <div class="category">
+                        <span class="tit">미니벨로</span>
+                    </div>
+                </div>
+                <div class="container col-lg-3 col-sm-6 mb-5 text-center">
+                    <img src="images/contents_img08.png" alt="폴딩">
+                    <div class="category">
+                        <span class="tit">폴딩</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img01.png" alt="전기자전거">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img02.png" alt="산악">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img03.png" alt="컴포트 산악형">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img04.png" alt="로드">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img05.png" alt="하이브리드">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img06.png" alt="시티">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img07.png" alt="미니벨로">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img08.png" alt="폴딩">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img09.png" alt="주니어">
-          </div>
-          <div class="col-lg-4 mb-5 col-sm-6 text-center">
-            <img src="images/contents_img10.png" alt="키즈">
-          </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- //contents -->
-    
-    <!-- contact -->
-    <section class="p-5 bg-light">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col text-center mb-3">
-            <h1 class="text-warning display-2">Contact Us</h1>
-            <p class="lead text-secondary">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8 col-sm-10">
-            <div class="text-center text-secondary">
-              <h2>Got Question ?</h2>
-              <p>Stay Connected</p>
-            </div>
-            <form class="text-muted">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
-              </div>
-              <div class="form-group">
-                <label for="messsage">Message</label>
-                <textarea type="text" class="form-control" id="messsage" rows="3"></textarea>
-              </div>
-              <button class="btn btn-outline-warning btn-block" type="submit">submit Question</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end contact -->
 
-    <!-- footer -->
-    <footer class="bg-secondary">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <h1 class="text-white font-wight-light text-capitalize p-3">pure bootstrap project</h1>
-            <h3 class="text-light font-weight-light font-italic mb-3">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</h3>
-            <div class="py-2">
-              <a href="#"><i class="fab fa-facebook fa-2x text-primary mx-3"></i></a>
-              <a href="#"><i class="fab fa-google-plus fa-2x text-danger mx-3"></i></a>
-              <a href="#"><i class="fab fa-twitter fa-2x text-info mx-3"></i></a>
-              <a href="#"><i class="fab fa-youtube fa-2x text-danger mx-3"></i></a>
+    <section class="custom_zone p-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="tit my-3">CUSTOMER CENTER</h2>
+                    <p class="text-muted">제품, 서비스, A/S에 대해<br> 궁금한 점이 있으시면 무엇이든 물어보세요.</p>
+                    <p class="tel text-muted">02-2671-3000</p>
+                    <p class="time text-muted">am 09:00 ~ pm 05:00</p>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="tit my-3">대량구매</h2>
+                    <p class="text-muted">자전거 대량구매가<br> 필요하시면, 특수 판매팀에<br> 문의하세요.</p>
+                    <p class="mail text-muted">sam_sales@samchuly.co.kr</p>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="tit my-3">SUPPORT</h2>
+                    <ul>
+                        <li><a href="#" class="text-muted">자주 묻는 질문</a></li>
+                        <li><a href="#" class="text-muted">온라인 A/S</a></li>
+                        <li><a href="#" class="text-muted">제품 설명서</a></li>
+                        <li><a href="#" class="text-muted">자전거 정보</a></li>
+                        <li><a href="#" class="text-muted">지난 제품보기</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="tit my-3">COMPANY</h2>
+                    <ul>
+                        <li><a href="#" class="text-muted">ALL.WAYS</a></li>
+                        <li><a href="#" class="text-muted">선수후원</a></li>
+                        <li><a href="#" class="text-muted">사회공헌</a></li>
+                        <li><a href="#" class="text-muted">투자정보</a></li>
+                        <li><a href="#" class="text-muted">대량구매</a></li>
+                        <li><a href="#" class="text-muted">채용정보</a></li>
+                        <li><a href="#" class="text-muted">오시는 길</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
+    <!-- //custom_zone -->
+
+    <section class="navbar navbar-expand-md bg-light p-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start wd-100">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-muted">개인정보취급방침</a></li>
+                    <li><a href="#" class="nav-link px-2 text-muted">내부정보관리규정</a></li>
+                    <li><a href="#" class="nav-link px-2 text-muted">이메일무단수집거부</a></li>
+                </ul>
+                <div class="nav-item dropdown" data-toggle="dropdown">
+                    <a class="nav-link text-muted text-uppercase font-weight-bold pl-3 dropdown-toggle">FAMILY SITE</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">첼로자전거</a>
+                        <a href="#" class="dropdown-item">GL&Co</a>
+                        <a href="#" class="dropdown-item">스마트자전거</a>
+                        <a href="#" class="dropdown-item">페도라 유모차, 카시트</a>
+                        <a href="#" class="dropdown-item">참좋은여행</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer_navbar -->
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer_area row bg-secondary p-5">
+                <div class="col text-left align-items-center">
+                    <address class="addr_area text-light">본사 : 서울특별시 강남구 테헤란로 445(삼성동 144-27, 본솔빌딩 7층) | 의왕공장(A/S) : 경기도 의왕시 고래들길 57 | A/S : 02-2671-3000</address>
+                    <cite class="copyright_area text-light">Copyright © 2016 - 2017 Samchuly Bicycle. All rights reserved.</cite>
+                </div>
+                <div class="col text-center">
+                    <a href="#">
+                        <img src="images/awards_logo.png" alt="웹어워드 코리아 2017 문화 / 레포츠부문 스포츠분야 대상">
+                    </a>
+                </div>
+                <div class="col text-center align-middle">
+                    <img src="images/footer_logo.png" alt="하단 로고">
+                </div>
+            </div>
+        </div>
     </footer>
-    <!-- end footer -->
+    <!-- //footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
