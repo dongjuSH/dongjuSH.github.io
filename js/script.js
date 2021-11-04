@@ -168,6 +168,6 @@ $(function(){
         window.open('http://ehdwn661.dothome.co.kr/project/project02','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
     $('.pro03_pop').click(function(){
-        window.open('http://ehdwn661.dothome.co.kr/project/project03','프로젝트2팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
+        window.open('http://ehdwn661.dothome.co.kr/project/project03','프로젝트3팝업','width=395, height=736, left=50, top=50, scrollbars=0, toolbar=0, menubar=no');
     });
 });
